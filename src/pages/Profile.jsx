@@ -82,48 +82,49 @@ export default function Profile() {
             </div>
             {/* Add more contact information fields here */}
           </div>
-        </div>
 
-        <div className="mt-6">
-          <h3 className="text-lg font-bold mb-4">Change Password</h3>
-          <div className="mb-4">
-            <label
-              htmlFor="currentPassword"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Current Password:
-            </label>
-            <input
-              type="password"
-              id="currentPassword"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="newPassword"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              New Password:
-            </label>
-            <input
-              type="password"
-              id="newPassword"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="confirmPassword"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Confirm New Password:
-            </label>
-            <input
-              type="password"
-              id="confirmPassword"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            />
+          {/* Password change section with adjusted width */}
+          <div className="md:w-1/2">
+            <h3 className="text-lg font-bold mb-4">Change Password</h3>
+            <div className="mb-4">
+              <label
+                htmlFor="currentPassword"
+                className="block text-gray-700 font-bold mb-2"
+              >
+                Current Password:
+              </label>
+              <input
+                type="password"
+                id="currentPassword"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="newPassword"
+                className="block text-gray-700 font-bold mb-2"
+              >
+                New Password:
+              </label>
+              <input
+                type="password"
+                id="newPassword"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="confirmPassword"
+                className="block text-gray-700 font-bold mb-2"
+              >
+                Confirm New Password:
+              </label>
+              <input
+                type="password"
+                id="confirmPassword"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
           </div>
         </div>
 
