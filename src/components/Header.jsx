@@ -1,4 +1,5 @@
 import { getAuth, signOut } from "firebase/auth";
+import { FiLogOut } from "react-icons/fi"; // Importing the logout icon
 
 export default function Header() {
   const handleLogout = () => {
@@ -54,22 +55,10 @@ export default function Header() {
           </button>
         </div>
         {/* Logout Icon */}
-        <div onClick={handleLogout} className="cursor-pointer">
-          <svg
-            className="h-6 w-6 text-gray-500 hover:text-red-600"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 11-6 0v-1m6-8V5a3 3 0 10-6 0v1"
-            ></path>
-          </svg>
-        </div>
+        <FiLogOut
+          onClick={handleLogout}
+          className="h-6 w-6 text-gray-500 hover:text-red-600 cursor-pointer"
+        />
       </div>
     </header>
   );
