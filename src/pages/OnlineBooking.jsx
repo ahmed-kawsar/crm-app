@@ -2,15 +2,14 @@ import { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
-// Function to generate random date between two dates
 function randomDate(start, end) {
   return new Date(
     start.getTime() + Math.random() * (end.getTime() - start.getTime())
   );
 }
 
-const startDate = new Date(2023, 0, 1); // 1st January 2023
-const endDate = new Date(); // Today
+const startDate = new Date(2023, 0, 1);
+const endDate = new Date();
 
 export default function OnlineBooking() {
   const [date, setDate] = useState(new Date());
@@ -33,7 +32,7 @@ export default function OnlineBooking() {
 
   const onChange = (date) => {
     setDate(date);
-    setShowBookingForm(true); // Show booking form when a date is selected
+    setShowBookingForm(true);
   };
 
   const handleBookingSubmit = (event) => {
@@ -49,8 +48,8 @@ export default function OnlineBooking() {
       service: formData.get("service"),
     };
     setBookings([newBooking, ...bookings]);
-    setShowBookingForm(false); // Hide the form after submission
-    event.target.reset(); // Reset the form fields
+    setShowBookingForm(false);
+    event.target.reset();
   };
 
   return (
@@ -61,13 +60,16 @@ export default function OnlineBooking() {
         <Calendar
           onChange={onChange}
           value={date}
-          className="p-2 rounded-md border border-gray-300 text-gray-800"
+          className="react-calendar"
           prev2Label={null}
           next2Label={null}
           showNeighboringMonth={false}
+          tileClassName={({ date, view }) =>
+            view === "month" && date.getDay() === 0 ? "text-red-500" : null
+          }
         />
 
-        {showBookingForm && ( // Conditionally render the booking form
+        {showBookingForm && (
           <form onSubmit={handleBookingSubmit} className="mt-6">
             <div className="mb-4">
               <label
